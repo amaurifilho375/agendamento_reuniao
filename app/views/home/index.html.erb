@@ -1,0 +1,14 @@
+<h1>PAGINA PRINCIPAL</h1>
+
+<%if user_signed_in? %>
+    <ul>
+     <li><%=current_user.email%> </li>
+     <li> <%= link_to "sair", destroy_user_session_path, method: :delete  %> </li>
+    </ul>
+
+<%else%>
+    <ul>
+      <li> <%= link_to "Logar", new_user_session_path  %> </li>
+      <li> <%= link_to "novo cadastro", new_user_registration_path  %> </li>
+    </ul>
+<%end%>

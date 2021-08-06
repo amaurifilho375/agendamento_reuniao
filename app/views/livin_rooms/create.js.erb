@@ -1,0 +1,15 @@
+var  quantidadeErro = <%= @livin_room.errors.count %>;
+
+if (quantidadeErro > 0){
+    $(".message").html("<h2>ERRO NO CADASTRO!</h2>");
+
+} else{
+   
+   $(".message").html("<h2>cadastro criado com sucesso!</h2>");
+   $("#livin_room_name").val("");
+}
+
+setTimeout(function(){
+    $(".message h2").remove();
+    
+}, 5000)

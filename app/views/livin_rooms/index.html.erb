@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Livin Rooms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @livin_rooms.each do |livin_room| %>
+      <tr>
+        <td><%= livin_room.name %></td>
+        <td><%= link_to 'Show', livin_room %></td>
+        <td><%= link_to 'Edit', edit_livin_room_path(livin_room) %></td>
+        <td><%= link_to 'Destroy', livin_room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Livin Room', new_livin_room_path %>
