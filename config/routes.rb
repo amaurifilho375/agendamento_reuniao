@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  #get 'home/index'
   root 'home#index'
 
+
+  resources :home, only: [:edit, :create, :show]
   resources :reserves
   resources :livin_rooms
   devise_for :users

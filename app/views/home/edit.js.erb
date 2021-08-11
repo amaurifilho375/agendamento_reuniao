@@ -1,0 +1,57 @@
+
+$(function (){
+
+
+     //$('#recipient-name').val('jesus');
+     
+      $('#recipient-name').val('<%=@quarda.name%>');
+
+      $('#recipient-name1').val('oi');
+
+      $('h4.modal-title').text('<%=@quarda.name%>');
+    
+      $('#sendMailModal').modal();
+
+
+
+
+    $('#sendMailModal').on('shown.bs.modal', function (e) {
+       $("#recipient-name1").focus();      
+    
+    });
+ 
+ });
+
+//$('h3.modal-title').text('estringue pode ser concatenada assim <%=@quarda.name%>')
+
+//$('h3.modal-title').text('<%=@quarda.name%>')
+
+//$('#sendMailModal').modal('toggle')
+
+
+
+
+//$('#myModal').modal('toggle')
+
+//$('#exampleModal').modal('show');
+
+
+//$('#myModal').modal()
+
+
+//$("#exampleModal").on('shown.bs.modal', function() {
+  //$('#myInput').focus()
+//});
+
+
+
+//$("#exampleModal").modal();
+
+
+  //$('document').ready(function() {
+    //$("#exampleModal").modal();
+  //});
+
+
+
+//alert('<%= @quarda.name%>');

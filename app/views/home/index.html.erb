@@ -1,14 +1,57 @@
-<h1>PAGINA PRINCIPAL</h1>
+<h1 style="margin-top: 33px; "> </h1>
 
-<%if user_signed_in? %>
-    <ul>
-     <li><%=current_user.email%> </li>
-     <li> <%= link_to "sair", destroy_user_session_path, method: :delete  %> </li>
-    </ul>
 
-<%else%>
-    <ul>
-      <li> <%= link_to "Logar", new_user_session_path  %> </li>
-      <li> <%= link_to "novo cadastro", new_user_registration_path  %> </li>
-    </ul>
-<%end%>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Primeiro</th>
+      <th scope="col">Último</th>
+      <th scope="col">Nickname</th>
+      <th scope="col">Nickname2</th>
+      <th><%= link_to "Disponivel", edit_home_path(@livinTe), remote: true %></th>
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+   
+   <% @friends.each do |user| %>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo2</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>@fat2</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td >Larry the Bird</td>
+      <td>@twitter</td>
+      <td>@twitter2</td>
+      <td>@twitter</td>
+    </tr>
+  
+   <tr>
+      <th scope="row">4</th>
+      <td >Larry the Bird</td>
+      <td>@twitter</td>
+      <td>@twitter2</td>
+      <td>@twitter3</td>
+    </tr>
+  
+  <%end%>
+  
+  </tbody>
+</table>
+
+<%= render 'update', quarda: @livinTe %>
+

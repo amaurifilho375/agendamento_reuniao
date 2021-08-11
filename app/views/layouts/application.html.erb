@@ -7,6 +7,24 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  
+    <h1 style="margin-top: 18px; margin-bottom: 28px;"> Reserva de Sala</h1>
+            
+          <%if user_signed_in?%> 
+              <div class="row align-items-start">
+                <li style="margin-left: 900px; margin-top: -43px; padding-top: -10px; color: #436EEE "><%=current_user.email%> </li>
+                <li style="margin-left: 1100px; margin-top: -43px; padding-top: -10px;  "> <%= link_to "sair", destroy_user_session_path, method: :delete  %> </li>
+              </div> 
+
+            <%else%>
+                <ul>
+                  <li> <%= link_to "Logar", new_user_session_path  %> </li>
+                  <li> <%= link_to "novo cadastro", new_user_registration_path  %> </li>
+                </ul>
+            <%end%>
+          
+    
   </head>
 
   <body>
