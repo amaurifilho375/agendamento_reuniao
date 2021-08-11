@@ -5,13 +5,16 @@ class HomeController < ApplicationController
   
   def index
        @livin_rooms = LivinRoom.all
-
+       @livinTe = LivinRoom.last
        @livins = LivinRoom.all
        
   end
 
 
   def create
+    
+    puts "ENTROU CREATEEE"
+
     @livin_room = LivinRoom.find(params[:id])
 
     @livin_room = LivinRoom.new(livin_room_params)
@@ -55,11 +58,13 @@ def edit
 
 end
 
- def show
-   
+def show
+end
 
- 
- end
+def teste
+
+  puts "ENTROU NA ACAO TESTE"
+end
 
 private
 
