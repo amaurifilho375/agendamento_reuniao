@@ -10,7 +10,7 @@
       </div>
       <div class="modal-body">
        
-       <%= form_for :quarda,  url: home_teste_path, method: :get   do |form| %>
+       <%= form_for :quarda,  url: home_teste_path, method: :get , remote: true  do |form| %>
          <div class="form-group">
             <label for="recipient-name" class="col-form-label">Recipient:</label>
             <input type="text" class="form-control" id="recipient-name">
@@ -22,11 +22,11 @@
 
           
           <div class="form-group">  
-             <%= form.label :dest , "Recipientes:", class:"col-form-label"%>
-            <%= form.text_field :namee, class:"form-control", id:"recipient-name1"%>
+             <%= form.label :name22 , "name22:", class:"col-form-label"%>
+            <%= form.text_field :nam22, class:"form-control", id:"recipient-name2"%>
           </div>
 
-
+        
       
           <div class="field">
               <%= form.text_field :id %>
@@ -34,23 +34,30 @@
          
              
           <div class="form-group">
-            <%= form.label :name2232323, class:"col-form-label" %>
-            <%= form.text_field :name, class:"form-control" %>
+            <%= form.label :name33,"name33:" ,class:"col-form-label" %>
+            <%= form.text_field :name33, class:"form-control" %>
           </div>
 
-          <div classs="form-group" >     
-     	        <%= form.submit "salvar2" %>
+        
+          <div class="form-group">
+            <b>Deseja confirmar essa reserva?</b><br />
+            <%= form.radio_button :reserved, '1' %> sim<br />
+            <%= form.radio_button :reserved, '0' %> nao<br />
           </div>
 
 
+          <div classs="modal-footer" >     
+     	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar2</button>
+              <%= form.submit "salvar", class:"btn btn-primary" %>
+     	    </div>
+
+            
+        
        
        <%end%> 
 
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Salvar</button>
-      </div>
+      
     </div>
   </div>
 </div>

@@ -13,7 +13,13 @@ $(function (){
       $('h4.modal-title').text('<%=@quarda.name%>');
 
       
-      $('#quarda_id').val('JESUS EH PERFEITO');
+      $('#quarda_id').val('<%= @quarda.id%>');
+
+      $('#recipient-name2').val('<%= @quarda.name%>')
+
+
+      $('#quarda_name33').val('<%= @quarda.name%>')
+      
 
      $("#quarda_id").hide();
 

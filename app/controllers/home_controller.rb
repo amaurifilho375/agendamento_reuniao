@@ -40,6 +40,7 @@ def edit
  
    @quarda = LivinRoom.find(params[:id])
    puts "NOME DA SALA #{@quarda.name}"
+
  
   respond_to do |format|
    
@@ -64,6 +65,42 @@ end
 def teste
 
   puts "ENTROU NA ACAO TESTE"
+
+
+  @quarda = LivinRoom.find(params[:quarda][:id])
+
+
+  puts " valor do testeeee:::: #{@quarda.name}"
+
+  @meutestes = "te amo jesus cristo"
+  
+  @vamostestar = @quarda
+
+  #@vamostestar = LivinRoom.first
+
+  
+
+
+  @roms = LivinRoom.first
+  #@roms = @roms.name
+
+
+  # @roms = "Jesus salvadorrrrrrrr"
+
+  @vamostestar = @quarda
+  @vamostestar = @vamostestar.name
+
+
+  puts "valor roms #{@roms}"
+
+  #@vamostestar = @quarda
+
+
+  respond_to do |format|
+
+    format.js
+
+  end
 end
 
 private

@@ -1,12 +1,34 @@
 <h1 style="margin-top: 33px; "> </h1>
 
+<div  id="alertando">
+   
+</div>
+
+<div  id="aqui33">
+    <%= link_to "Disponivel", edit_home_path(@livinTe), remote: true %>
+</div>
+
+<div id="teste33">
+
+    <%= @roms  %>
+
+</div>
+
+<div id="aqui3333">>
+  <li> valor vindo do ajax <%=@livinTe.name %> </li>
+</div>
+
+<div id="aqui3333">>
+  <li> valor::::::::: <%=@vamostestar %> </li>
+</div>
+
 
 
 <table class="table table-hover">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Primeiro</th>
+      <th scope="col">Primeiro: <%=@livinTe.name%></th>
       <th scope="col">Último</th>
       <th scope="col">Nickname</th>
       <th scope="col">Nickname2</th>
